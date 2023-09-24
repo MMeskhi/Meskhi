@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import StyledComponentsRegistry from "./lib/registry";
-
-const inter = Inter({ subsets: ["latin"] });
+import StyledComponentsRegistry from "../lib/registry";
+import GlobalStyles from "../styles/GlobalStyles";
 
 export const metadata: Metadata = {
-  title: "MMeskhi",
+  title: "MMeskhi | Personal Portfolio",
   description: "Mikheil Meskhi's Personal Website",
 };
 
@@ -17,7 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
