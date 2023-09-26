@@ -1,6 +1,6 @@
 "use client";
 
-import { createGlobalStyle } from "styled-components";
+import { styled, createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-  background-color: #EEF5F9;
+  background-color: #222;
   color: #000000;
   font-feature-settings: "case";
   max-width: 100%;
@@ -20,12 +20,16 @@ const GlobalStyles = createGlobalStyle`
 li {
   text-decoration: none;
   list-style: none;
+
+  transition: all 0.2s ease;
 }
 
 a {
   text-decoration: none;
   width: fit-content;
   color: #000000;
+
+  transition: all 0.2s ease;
 }
 `;
 
