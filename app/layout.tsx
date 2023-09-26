@@ -1,8 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
-import StyledComponentsRegistry from "../lib/registry";
-import GlobalStyles from "../styles/GlobalStyles";
-
+import { Inter } from "next/font/google";
 import Header from "@/components/header";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MMeskhi | Personal Portfolio",
@@ -16,12 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <Header />
-          {children}
-        </StyledComponentsRegistry>
+      <body className={inter.className}>
+        <Header />
+        {children}
       </body>
     </html>
   );
