@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function header() {
   return (
-    <header className="flex justify-center items-center">
+    <header className="flex justify-center items-center fixed top-0 left-0 right-0">
       <motion.nav
         className=""
         initial={{ y: -100, opacity: 0 }}
