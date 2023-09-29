@@ -16,17 +16,17 @@ export default function Aside() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="w-px h-24 bg-secondary"></div>
+        <div className="w-px h-20 bg-secondary"></div>
       </motion.div>
       <motion.div
         className="fixed right-16 top-0 [&>*]:text-xl"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="w-px h-24 bg-secondary"></div>
+        <div className="w-px h-32 bg-secondary"></div>
       </motion.div>
       <motion.div
-        className="fixed left-14 bottom-0 [&>*]:text-xl hover:[&>a]:text-teal-50 hover:[&>a]:translate-y-[-0.25rem]"
+        className="fixed left-[3.4rem] bottom-0 [&>*]:text-xl hover:[&>a]:text-teal-50 hover:[&>a]:translate-y-[-0.25rem]"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -45,11 +45,11 @@ export default function Aside() {
         <div className="w-px h-32 bg-secondary"></div>
       </motion.div>
       <motion.div
-        className="fixed right-14 bottom-0"
+        className="fixed right-16 bottom-0"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="w-px h-32 bg-secondary"></div>
+        <div className="w-px h-20 bg-secondary"></div>
       </motion.div>
     </aside>
   );
