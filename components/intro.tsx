@@ -4,7 +4,7 @@ import { introData } from "@/lib/data";
 import { contactData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/app/context/active-section-context";
+import { useActiveSectionContext } from "@/context/active-section-context";
 import { IoMailSharp, IoCallSharp, IoLocationSharp } from "react-icons/io5";
 
 export default function Intro() {
@@ -72,7 +72,7 @@ export default function Intro() {
         ))}
         <a
           href="#"
-          className="border-solid border border-stone-300 px-4 py-3 text-stone-300 text-sm hover:border-stone-50 hover:text-stone-50"
+          className="border-solid border border-emerald-300 px-4 py-3 text-emerald-300 text-sm hover:border-emerald-50 hover:text-emerald-50"
         >
           Resume
         </a>

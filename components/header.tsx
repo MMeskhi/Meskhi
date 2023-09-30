@@ -4,7 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/app/context/active-section-context";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
   const { activeSection, setActiveSection } = useActiveSectionContext();
@@ -14,7 +14,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 40) {
         setScrolling(true);
         controls.start({ opacity: 1, y: 0 });
       } else {

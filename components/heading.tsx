@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function Heading({ children }) {
-  return <h2 className="text-slate-300">{children}</h2>;
+type HeadingProps = {
+  children: React.ReactNode;
+};
+
+export default function Heading({ children }: HeadingProps) {
+  return <h2 className="text-slate-300 text-2xl mb-1">{children}</h2>;
 }

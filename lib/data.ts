@@ -57,14 +57,12 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
+  "JavaScript (ES6+)",
   "TypeScript",
   "React",
   "Next.js",
-  "Git",
-  "Redux",
+  "HTML/CSS",
+  "Tailwind",
 ] as const;
 
 export const contactData = [
