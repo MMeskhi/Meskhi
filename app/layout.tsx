@@ -7,8 +7,8 @@ import ActiveSectionContextProvider from "../context/active-section-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MMeskhi | Personal Portfolio",
-  description: "Mikheil Meskhi's Personal Website",
+  title: "Mikheil Meskhi • Front-End Dev",
+  description: "The portfolio of Mikheil Meskhi, Front-End Developer.",
 };
 
 export default function RootLayout({

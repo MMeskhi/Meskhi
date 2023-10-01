@@ -1,23 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { introData } from "@/lib/data";
 import { contactData } from "@/lib/data";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
 import { IoMailSharp, IoCallSharp, IoLocationSharp } from "react-icons/io5";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
-  const { ref, inView } = useInView({
-    threshold: 0.6,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Intro");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Intro", 0.5);
 
   return (
     <section
@@ -34,7 +24,7 @@ export default function Intro() {
         >
           <h1 className="text-6xl text-slate-200">{item.title}</h1>
           <h2 className="text-4xl text-slate-400">{item.prof}</h2>
-          <p className="text-sm max-w-xl mt-3 text-slate-500">
+          <p className="text-sm max-w-lg  mt-3 text-slate-500">
             {item.description}
           </p>
         </motion.div>

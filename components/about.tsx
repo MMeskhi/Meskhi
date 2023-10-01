@@ -1,35 +1,28 @@
 "use client";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import React from "react";
 import { skillsData } from "@/lib/data";
 import Heading from "./heading";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref, inView } = useInView({ threshold: 0.6 });
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("About");
 
   return (
     <section id="about" ref={ref} className="">
-      <div className="py-16 px-12 flex items-center justify-between gap-20 relative">
+      <div className="py-16 px-12 flex items-start justify-between gap-20 relative overflow-hidden">
         <motion.span
           className="rounded-3xl bg-slate-800 bg-opacity-30 absolute inset-0 -z-10"
           initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
         ></motion.span>
         <div className="">
           <Heading>About Me</Heading>
           <p className="text-slate-400 max-w-xl w-full">
             Junior front-end developer with work experience primarily in{" "}
-            <span className="text-secondary">JavaScript</span>,{" "}
-            <span className="text-secondary">HTML5/CSS</span>. I've already
+            <span className="text-slate-200">JavaScript</span>,{" "}
+            <span className="text-slate-200">HTML5/CSS</span>. I've already
             worked on multiple projects, such as the{" "}
             <span className="text-emerald-300 ">Software Testers Academy </span>
             platform and the website for the Georgian jewelry brand{" "}
@@ -40,18 +33,17 @@ export default function About() {
             to continue expanding my skillset and gaining further experience in
             the field.
           </p>
-          <ul className="grid grid-cols-2 grid-rows-3 gap-2 mt-6 max-w-xs w-full">
-            {skillsData.map((skill, index) => (
-              <li
-                className="text-slate-400 whitespace-nowrap text-sm w-fit before:content-['•'] before:text-emerald-400 before:pr-1"
-                key={index}
-              >
-                {skill}
-              </li>
-            ))}
-          </ul>
         </div>
-        <div></div>
+        <ul className="grid grid-cols-2 grid-rows-3 gap-2 pt-9 max-w-xs w-full mr-[-4.5rem]">
+          {skillsData.map((skill, index) => (
+            <li
+              className="text-slate-400 whitespace-nowrap text-sm w-fit before:content-['•'] before:text-emerald-400 before:pr-1"
+              key={index}
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

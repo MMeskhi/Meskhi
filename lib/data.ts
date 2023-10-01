@@ -1,5 +1,3 @@
-import React from "react";
-
 export const links = [
   {
     name: "Intro",
@@ -10,8 +8,8 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Education / Experience",
-    hash: "#education / Experience",
+    name: "Education/Experience",
+    hash: "#education/experience",
   },
   {
     name: "Projects",
@@ -34,7 +32,7 @@ export const experiencesData = [
     location: "Georgia, Tbilisi",
     description:
       "I worked as a junior front-end developer, Developed the Software Testers Academy platform for the company and created several websites for other companies (Oftalmij, Status, Barron, GWE).",
-    date: "2022 - 2023",
+    date: "October 2022 - April 2023",
   },
 ] as const;
 
@@ -45,6 +43,16 @@ export const educationsData = [
     location: "Georgia, Tbilisi",
     date: "2016 - 2022",
   },
+  {
+    title: "REACT JS/NATIVE DEVELOPMENT",
+    academy: "Smart Academy",
+    date: "2023",
+  },
+  {
+    title: "FRONT-END DEVELOPMENT",
+    academy: "Smart Academy",
+    date: "2022",
+  },
 ] as const;
 
 export const projectsData = [
@@ -53,6 +61,7 @@ export const projectsData = [
     description: "",
     tags: [""],
     imageUrl: "",
+    link: "",
   },
 ] as const;
 
