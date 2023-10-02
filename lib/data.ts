@@ -1,3 +1,6 @@
+import sta from "@/public/sta.png";
+import staHover from "@/public/staH.png";
+
 export const links = [
   {
     name: "Intro",
@@ -8,8 +11,8 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Education/Experience",
-    hash: "#education/experience",
+    name: "Experience/Education",
+    hash: "#experience/education",
   },
   {
     name: "Projects",
@@ -56,11 +59,13 @@ export const educationsData = [
 
 export const projectsData = [
   {
-    title: "",
-    description: "",
-    tags: [""],
-    imageUrl: "",
-    link: "",
+    title: "Software Testers Academy",
+    description: "Academy for software testers",
+    tags: ["HTML/CSS, Javascript"],
+    imageUrl: sta,
+    imageOnHoverUrl: staHover,
+    link: "https://mmeskhi.github.io/Software-Testers-Academy",
+    GithubLink: "https://github.com/MMeskhi/Software-Testers-Academy",
   },
 ] as const;
 

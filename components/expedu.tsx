@@ -4,11 +4,11 @@ import { experiencesData, educationsData } from "@/lib/data";
 import Heading from "./heading";
 import { useSectionInView } from "@/lib/hooks";
 
-export default function EducationExperience() {
-  const { ref } = useSectionInView("Education/Experience");
+export default function ExperienceEducation() {
+  const { ref } = useSectionInView("Experience/Education");
 
   return (
-    <section id="education/experience" ref={ref} className="py-48">
+    <section id="experience/education" ref={ref} className="py-48">
       <div className="flex justify-between items-center">
         <Heading>Experience</Heading>
         <Heading>Education</Heading>

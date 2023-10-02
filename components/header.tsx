@@ -10,16 +10,16 @@ export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
-  const [scrolling, setScrolling] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const controls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
+      if (window.scrollY > 0 && !isHeaderVisible) {
+        setIsHeaderVisible(true);
         controls.start({ opacity: 1, y: 0 });
-      } else {
-        setScrolling(false);
+      } else if (window.scrollY === 0 && isHeaderVisible) {
+        setIsHeaderVisible(false);
         controls.start({ opacity: 0, y: -100 });
       }
     };
@@ -29,7 +29,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [controls]);
+  }, [controls, isHeaderVisible]);
 
   return (
     <header className="flex justify-center items-center fixed top-0 left-0 right-0 z-50">
@@ -40,7 +40,7 @@ export default function Header() {
       >
         <ul className="flex m-5 space-x-4 px-6 py-3 relative">
           <motion.span
-            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg absolute inset-0 -z-20`}
+            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg shadow-sm absolute inset-0 -z-20`}
             initial={{ y: -100, opacity: 0 }}
             animate={controls}
           ></motion.span>

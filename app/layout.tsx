@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-primary`}>
+      <body className={`${inter.className} bg-[#1a0b1f]`}>
         <ActiveSectionContextProvider>
           <Header />
           {children}
