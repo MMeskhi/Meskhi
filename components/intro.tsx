@@ -24,7 +24,7 @@ export default function Intro() {
         >
           <h1 className="text-6xl text-slate-200">{item.title}</h1>
           <h2 className="text-4xl text-slate-400">{item.prof}</h2>
-          <p className="text-sm max-w-lg  mt-3 text-slate-500">
+          <p className="text-sm max-w-lg mt-3 text-slate-500">
             {item.description}
           </p>
         </motion.div>

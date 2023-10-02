@@ -29,7 +29,7 @@ export const introData = [
 export const experiencesData = [
   {
     title: "Junior Front-End Developer",
-    location: "Georgia, Tbilisi",
+    place: "Smart Web",
     description:
       "I worked as a junior front-end developer, Developed the Software Testers Academy platform for the company and created several websites for other companies (Oftalmij, Status, Barron, GWE).",
     date: "October 2022 - April 2023",
@@ -40,17 +40,16 @@ export const educationsData = [
   {
     title: "INFORMATION TECHNOLOGY & TOURISM MANAGEMENT",
     uniName: "The University of Georgia (UG)",
-    location: "Georgia, Tbilisi",
     date: "2016 - 2022",
   },
   {
     title: "REACT JS/NATIVE DEVELOPMENT",
-    academy: "Smart Academy",
+    uniName: "Smart Academy",
     date: "2023",
   },
   {
     title: "FRONT-END DEVELOPMENT",
-    academy: "Smart Academy",
+    uniName: "Smart Academy",
     date: "2022",
   },
 ] as const;

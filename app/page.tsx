@@ -1,6 +1,7 @@
 import Aside from "@/components/aside";
 import Intro from "@/components/intro";
 import About from "@/components/about";
+import Projects from "@/components/projects";
 import EducationExperience from "@/components/eduexp";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Intro />
       <About />
       <EducationExperience />
+      <Projects />
     </main>
   );
 }

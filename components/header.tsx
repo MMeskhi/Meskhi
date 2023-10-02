@@ -40,7 +40,7 @@ export default function Header() {
       >
         <ul className="flex m-5 space-x-4 px-6 py-3 relative">
           <motion.span
-            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg absolute inset-0 -z-10`}
+            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg absolute inset-0 -z-20`}
             initial={{ y: -100, opacity: 0 }}
             animate={controls}
           ></motion.span>
@@ -53,7 +53,7 @@ export default function Header() {
               <Link
                 href={link.hash}
                 className={clsx(
-                  "text-teal-200 hover:text-amber-50 px-2 py-1 relative",
+                  "text-teal-200 hover:text-amber-50 px-2 py-1 relative z-50",
                   {
                     "text-amber-50": activeSection === link.name,
                   }
@@ -68,7 +68,10 @@ export default function Header() {
                   <motion.span
                     className="bg-slate-400 bg-opacity-80 rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
-                    transition={{ type: "spring", stiffness: 400, damping: 40 }}
+                    transition={{
+                      stiffness: 400,
+                      damping: 40,
+                    }}
                   ></motion.span>
                 )}
               </Link>
