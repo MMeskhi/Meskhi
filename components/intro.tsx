@@ -13,7 +13,7 @@ export default function Intro() {
     <section
       id="intro"
       ref={ref}
-      className="flex items-center justify-between gap-20 h-screen min-h-screen mx-auto"
+      className="flex items-center justify-between gap-20 min-h-screen mx-auto"
     >
       {introData.map((item, index) => (
         <motion.div

@@ -29,7 +29,7 @@ export default function ExperienceEducation() {
           {educationsData.map((item, index) => (
             <div
               key={index}
-              className="text-right border border-teal-600 py-1 px-2 hover:border-teal-700 duration-200"
+              className="text-right border border-teal-600 py-1 px-2 hover:border-teal-700 duration-200 shadow-sm "
             >
               <h3 className="text-slate-300">{item.title}</h3>
               <h4 className="text-slate-400">{item.uniName}</h4>
