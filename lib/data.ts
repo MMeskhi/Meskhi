@@ -1,5 +1,6 @@
 import sta from "@/public/sta.png";
-import staHover from "@/public/staH.png";
+import gwe from "@/public/gwe.png";
+import oftalmij from "@/public/oftalmij.png";
 
 export const links = [
   {
@@ -34,7 +35,7 @@ export const experiencesData = [
     title: "Junior Front-End Developer",
     place: "Smart Web",
     description:
-      "I worked as a junior front-end developer, Developed the Software Testers Academy platform for the company and created several websites for other companies (Oftalmij, Status, Barron, GWE).",
+      "I worked as a junior front-end developer, Developed the Software Testers Academy platform for the company and created several websites for other companies (Oftalmij, Status, Barron, Kenari, GWE).",
     date: "October 2022 - April 2023",
   },
 ] as const;
@@ -60,12 +61,27 @@ export const educationsData = [
 export const projectsData = [
   {
     title: "Software Testers Academy",
-    description: "Academy for software testers",
+    description: "Platform for software testers academy",
     tags: ["HTML/CSS, Javascript"],
     imageUrl: sta,
-    imageOnHoverUrl: staHover,
-    link: "https://mmeskhi.github.io/Software-Testers-Academy",
+    link: "https://softwaretestersacademy.ge",
     GithubLink: "https://github.com/MMeskhi/Software-Testers-Academy",
+  },
+  {
+    title: "Georgian Wine Estates",
+    description: "Georgian wine shop's online catalogue",
+    tags: ["HTML/CSS, Javascript"],
+    imageUrl: gwe,
+    link: "https://gwe.ge",
+    GithubLink: "https://github.com/MMeskhi/Georgian-Wine-Estates",
+  },
+  {
+    title: "Oftalmij",
+    description: "Website fot Javrishvili Eye Microsurgery Clinic Oftalmij",
+    tags: ["HTML/CSS, Javascript"],
+    imageUrl: oftalmij,
+    link: "https://mmeskhi.github.io/Oftalmij",
+    GithubLink: "https://github.com/MMeskhi/Oftalmij",
   },
 ] as const;
 

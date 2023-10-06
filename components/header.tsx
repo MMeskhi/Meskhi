@@ -15,7 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0 && !isHeaderVisible) {
+      if (window.scrollY > 80 && !isHeaderVisible) {
         setIsHeaderVisible(true);
         controls.start({ opacity: 1, y: 0 });
       } else if (window.scrollY === 0 && isHeaderVisible) {
@@ -37,8 +37,9 @@ export default function Header() {
         className=""
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1 }}
       >
-        <ul className="flex m-5 space-x-4 px-6 py-3 relative">
+        <ul className="flex m-5 space-x-3 px-6 py-3 relative">
           <motion.span
             className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg shadow-sm absolute inset-0 -z-20`}
             initial={{ y: -100, opacity: 0 }}
@@ -53,7 +54,7 @@ export default function Header() {
               <Link
                 href={link.hash}
                 className={clsx(
-                  "text-teal-200 hover:text-amber-50 px-2 py-1 relative z-50",
+                  "text-teal-200 hover:text-amber-50 px-3 py-1 relative z-50",
                   {
                     "text-amber-50": activeSection === link.name,
                   }
@@ -66,7 +67,7 @@ export default function Header() {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-slate-400 bg-opacity-80 rounded-full absolute inset-0 -z-10"
+                    className="bg-slate-600 bg-opacity-60 rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       stiffness: 400,

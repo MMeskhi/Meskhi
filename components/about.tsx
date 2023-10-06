@@ -9,35 +9,33 @@ export default function About() {
   const { ref } = useSectionInView("About");
 
   return (
-    <section id="about" ref={ref} className="">
+    <section id="about" ref={ref} className="scroll-mt-40">
       <div className="py-16 px-12 flex items-start justify-between gap-20 relative overflow-hidden">
         <motion.span
           className="rounded-3xl bg-slate-800 bg-opacity-30 shadow-xl  absolute inset-0 -z-10"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
         ></motion.span>
         <div className="">
           <Heading>About Me</Heading>
           <p className="text-slate-400 max-w-xl w-full">
-            Junior front-end developer with work experience primarily in{" "}
-            <span className="text-slate-200">JavaScript</span>,{" "}
-            <span className="text-slate-200">HTML5/CSS</span>. I've already
-            worked on multiple projects, such as the{" "}
-            <span className="text-emerald-300 ">Software Testers Academy </span>
-            platform and the website for the Georgian jewelry brand{" "}
-            <span className="text-emerald-300 ">Barron</span>. Additionally,
+            I'm a front-end developer with experience in website building and
+            customization. I've worked on multiple projects, such as the{" "}
+            <span className="text-blue-300">Software Testers Academy </span>
+            platform, the Georgian jewelry brand{" "}
+            <span className="text-blue-300">Barron</span>, and the optical
+            company <span className="text-blue-300">Kenari</span>. Additionally,
             I've created websites for{" "}
-            <span className="text-emerald-300 ">Status Clinic</span> and{" "}
-            <span className="text-emerald-300 ">Oftalmij</span>. I'm motivated
-            to continue expanding my skillset and gaining further experience in
-            the field.
+            <span className="text-blue-300">Status Clinic</span> and{" "}
+            <span className="text-blue-300">Oftalmij</span>.
           </p>
         </div>
         <ul className="grid grid-cols-2 grid-rows-3 gap-2 pt-9 max-w-xs w-full mr-[-4.5rem]">
           {skillsData.map((items, index) => (
             <li
-              className="text-slate-400 whitespace-nowrap text-sm w-fit before:content-['•'] before:text-emerald-400 before:pr-1"
+              className="text-slate-400 whitespace-nowrap text-sm w-fit before:content-['•'] before:text-blue-300 before:pr-1"
               key={index}
             >
               {items}
