@@ -6,10 +6,14 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
 export default function ExperienceEducation() {
-  const { ref } = useSectionInView("Experience/Education");
+  const { ref } = useSectionInView("Experience/Education", 0.5);
 
   return (
-    <section id="experience/education" ref={ref} className="py-48 -scroll-mt-3">
+    <section
+      id="experience/education"
+      ref={ref}
+      className="py-48 -scroll-mt-3 max-sm:py-32"
+    >
       <div className="flex justify-between items-center">
         <Heading>Experience</Heading>
         <Heading>Education</Heading>

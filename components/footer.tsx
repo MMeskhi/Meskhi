@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="container mx-auto px-28 xl:px-20 max-w-6xl mt-48 mb-5 flex justify-center items-center">
+    <footer className="container mx-auto px-28 xl:px-20 max-w-6xl mt-48 mb-5 flex justify-center items-center relative z-[102]">
       <motion.div
         className="flex flex-col justify-center items-center w-fit relative"
         initial="default"
@@ -33,15 +33,15 @@ export default function Footer() {
             <SiVercel /> Vercel for host
           </p>
         </motion.span>
-        <motion.h4
-          className="text-slate-300 text-opacity-95 text-center cursor-default"
+        <motion.div
+          className="text-slate-300 text-opacity-95 text-center cursor-default whitespace-nowrap"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
           © 2023 Mikheil Meskhi
-        </motion.h4>
+        </motion.div>
       </motion.div>
     </footer>
   );

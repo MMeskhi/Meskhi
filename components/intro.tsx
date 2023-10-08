@@ -21,7 +21,7 @@ export default function Intro() {
       ref={ref}
       className="flex items-center justify-center min-h-screen mx-auto"
     >
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full max-md:flex-col max-md:space-y-12">
         {introData.map((item, index) => (
           <motion.div
             className="flex items-start flex-col gap-y-2"
@@ -29,8 +29,12 @@ export default function Intro() {
             initial={{ y: -160, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <h1 className="text-6xl text-slate-200">{item.title}</h1>
-            <h2 className="text-4xl text-slate-400">{item.prof}</h2>
+            <h1 className="text-6xl text-slate-200 max-sm:text-5xl uppercase">
+              {item.title}
+            </h1>
+            <h2 className="text-4xl text-slate-400 max-sm:text-3xl">
+              {item.prof}
+            </h2>
             <p className="text-sm max-w-lg mt-2 text-slate-500">
               {item.description}
             </p>
@@ -39,6 +43,7 @@ export default function Intro() {
                 href="https://github.com/MMeskhi"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <AiFillGithub />
               </a>
@@ -46,6 +51,7 @@ export default function Intro() {
                 href="https://www.linkedin.com/in/mikheilmeskhi/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Linkedin"
               >
                 <AiFillLinkedin />
               </a>
@@ -53,6 +59,7 @@ export default function Intro() {
                 href="https://www.instagram.com/meskhi1"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <AiFillInstagram />
               </a>
@@ -60,6 +67,7 @@ export default function Intro() {
                 href="https://www.facebook.com/MishaMeskhi11"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <AiFillFacebook />
               </a>
@@ -98,7 +106,10 @@ export default function Intro() {
             </ul>
           ))}
           <a
-            href="#"
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Resume"
             className="relative border-solid border border-blue-200 px-4 py-3 text-blue-100 text-sm hover:border-blue-300 hover:text-blue-200 before:bg-blue-950 before:inset-0 before:absolute before:-z-50 before:bg-opacity-40 before:rounded-sm before:translate-x-24 hover:before:translate-x-0 before:duration-300 overflow-hidden"
           >
             Resume

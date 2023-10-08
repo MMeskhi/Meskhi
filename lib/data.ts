@@ -26,7 +26,7 @@ export const introData = [
     title: "Mikheil Meskhi",
     prof: "Front-End Developer",
     description:
-      "Hello, My name is Mikheil Front-end developer based on Tbilisi and I enjoy creating things that live on the internet.",
+      "Hello! I'm Mikheil, a front-end developer based in Tbilisi and I enjoy crafting experiences that live on the web.",
   },
 ] as const;
 

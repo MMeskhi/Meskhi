@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-slate-950 relative z-[99999]">
+    <section className="min-h-screen flex flex-col justify-center items-center bg-[#1a0b1f] relative z-[101] -mb-60">
       <div className="px-5 md:px-10">
         <div className="py-16 md:py-24 lg:py-32">
           <div className="mx-auto flex-col flex w-full max-w-3xl items-center">
@@ -13,7 +13,7 @@ export default function NotFound() {
               </h1>
               <div className="mx-auto max-w-[528px] mb-5 md:mb-6 lg:mb-8">
                 <p className="text-slate-400 max-[479px]:text-sm">
-                  this page doesn't exist
+                  this page doesn&apos;t exist
                 </p>
               </div>
               <Link

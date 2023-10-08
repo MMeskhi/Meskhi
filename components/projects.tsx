@@ -11,9 +11,13 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
 
   return (
-    <section id="projects" ref={ref} className="scroll-mt-40">
+    <section
+      id="projects"
+      ref={ref}
+      className="scroll-mt-40 max-sm:scroll-mt-24"
+    >
       <Heading>Projects</Heading>
-      <p className="text-slate-400 -mt-1">Some of the things I've built</p>
+      <p className="text-slate-400 -mt-1">Some of the things I&apos;ve built</p>
       <ul className="mt-4 space-y-8 [&>*:nth-child(odd)]:pr-20 [&>*:nth-child(even)]:pl-20">
         {projectsData.map((item, index) => (
           <motion.li
@@ -30,6 +34,7 @@ export default function Projects() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Project"
               className="relative before:duration-200 before:bg-slate-950 before:bg-opacity-20 hover:before:bg-opacity-10 before:absolute before:inset-0"
             >
               <Image
@@ -44,6 +49,7 @@ export default function Projects() {
               href={item.GithubLink}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className={`text-3xl text-slate-900 hover:text-opacity-70 duration-200 absolute top-1 ${
                 index % 2 === 0 ? "left-1" : "right-1"
               }`}
