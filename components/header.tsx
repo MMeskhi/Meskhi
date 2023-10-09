@@ -54,7 +54,7 @@ export default function Header() {
               <Link
                 href={link.hash}
                 className={clsx(
-                  "text-teal-200 hover:text-amber-50 px-3 py-1 relative z-50 max-md:text-xs max-sm:px-2",
+                  "text-teal-200 hover:text-amber-50 duration-200 px-3 py-1 relative z-50 max-md:text-xs max-sm:px-2",
                   {
                     "text-amber-50": activeSection === link.name,
                   }

@@ -38,7 +38,7 @@ export default function Intro() {
             <p className="text-sm max-w-lg mt-2 text-slate-500">
               {item.description}
             </p>
-            <div className="flex justify-center items-center space-x-4 mt-3 [&>*]:text-xl text-teal-300 hover:[&>a]:text-teal-50 hover:[&>a]:-translate-y-0.5">
+            <div className="flex justify-center items-center space-x-4 mt-3 [&>*]:text-xl text-teal-300 hover:[&>a]:text-teal-50 hover:[&>a]:-translate-y-0.5 [&>*]:duration-200">
               <a
                 href="https://github.com/MMeskhi"
                 target="_blank"
@@ -84,7 +84,7 @@ export default function Intro() {
               <li>
                 <a
                   href={`mailto:${item.mail}`}
-                  className="flex items-center gap-x-1 text-slate-300 hover:text-blue-100"
+                  className="flex items-center gap-x-1 text-slate-300 hover:text-blue-100 duration-200"
                 >
                   <IoMailSharp />
                   {item.mail}
@@ -93,7 +93,7 @@ export default function Intro() {
               <li>
                 <a
                   href={`tel:${item.phone}`}
-                  className="flex items-center gap-x-1 text-slate-300 hover:text-blue-100"
+                  className="flex items-center gap-x-1 text-slate-300 hover:text-blue-100 duration-200"
                 >
                   <IoCallSharp />
                   {item.phone}
@@ -110,7 +110,7 @@ export default function Intro() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Resume"
-            className="relative border-solid border border-blue-200 px-4 py-3 text-blue-100 text-sm hover:border-blue-300 hover:text-blue-200 before:bg-blue-950 before:inset-0 before:absolute before:-z-50 before:bg-opacity-40 before:rounded-sm before:translate-x-24 hover:before:translate-x-0 before:duration-300 overflow-hidden"
+            className="relative border-solid border duration-200 border-blue-200 px-4 py-3 text-blue-100 text-sm hover:border-blue-300 hover:text-blue-200 before:bg-blue-950 before:inset-0 before:absolute before:-z-50 before:bg-opacity-40 before:rounded-sm before:translate-x-24 hover:before:translate-x-0 before:duration-300 overflow-hidden"
           >
             Resume
           </a>

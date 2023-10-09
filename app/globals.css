@@ -20,17 +20,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
-
-@layer base {
-  h1 {
-    @apply text-2xl;
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-
-  a {
-    @apply text-base transition-all duration-200 ease-linear;
-  }
-}
