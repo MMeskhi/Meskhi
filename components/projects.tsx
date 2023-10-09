@@ -14,11 +14,11 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="scroll-mt-40 max-sm:scroll-mt-24"
+      className="scroll-mt-40 max-sm:scroll-mt-16"
     >
       <Heading>Projects</Heading>
       <p className="text-slate-400 -mt-1">Some of the things I&apos;ve built</p>
-      <ul className="mt-4 space-y-8 [&>*:nth-child(odd)]:pr-20 [&>*:nth-child(even)]:pl-20">
+      <ul className="mt-4 space-y-8 [&>*:nth-child(odd)]:pr-20 [&>*:nth-child(even)]:pl-20 max-sm:[&>*:nth-child(odd)]:pr-0 max-sm:[&>*:nth-child(even)]:pl-0">
         {projectsData.map((item, index) => (
           <motion.li
             key={index}
@@ -43,6 +43,9 @@ export default function Projects() {
                 alt={item.title}
                 priority={true}
                 quality={60}
+                width={900}
+                height={400}
+                sizes="(max-width: 768px) 40%"
               />
             </a>
             <a
@@ -57,7 +60,7 @@ export default function Projects() {
               <FaGithubSquare />
             </a>
             <div
-              className={`absolute ${
+              className={`absolute max-sm:static max-sm:my-2 ${
                 index % 2 === 0 ? "right-0" : "left-0"
               } bottom-2 bg-slate-800 rounded-md py-2 px-4`}
             >
@@ -65,7 +68,7 @@ export default function Projects() {
               <p className="text-slate-300 max-w-xs">{item.description}</p>
             </div>
             <div
-              className={`absolute ${
+              className={`absolute max-sm:static max-sm:w-fit ${
                 index % 2 === 0 ? "left-2" : "right-2"
               } bottom-2 bg-slate-800 bg-opacity-80 rounded-md py-2 px-4`}
             >

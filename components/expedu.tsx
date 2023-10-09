@@ -12,14 +12,14 @@ export default function ExperienceEducation() {
     <section
       id="experience/education"
       ref={ref}
-      className="py-48 -scroll-mt-3 max-sm:py-32"
+      className="py-48 -scroll-mt-3 max-sm:-scroll-mt-16 max-sm:py-32"
     >
       <div className="flex justify-between items-center">
         <Heading>Experience</Heading>
         <Heading>Education</Heading>
       </div>
       <hr className="mb-4 border-teal-700" />
-      <div className="flex justify-between items-start gap-16">
+      <div className="flex justify-between items-start gap-16 max-sm:flex-col max-sm:items-stretch">
         {experiencesData.map((item, index) => (
           <motion.div
             key={index}

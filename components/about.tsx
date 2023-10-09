@@ -32,7 +32,7 @@ export default function About() {
             <span className="text-blue-300">Oftalmij</span>.
           </p>
         </div>
-        <ul className="grid grid-cols-2 grid-rows-3 gap-2 pt-9 max-w-xs w-full mr-[-4.5rem] max-md:pt-0">
+        <ul className="grid grid-cols-2 grid-rows-3 gap-2 pt-9 max-w-xs w-full mr-[-4.5rem] max-md:pt-0 max-sm:gap-x-8">
           {skillsData.map((items, index) => (
             <li
               className="text-slate-400 whitespace-nowrap text-sm w-fit before:content-['•'] before:text-blue-300 before:pr-1"
