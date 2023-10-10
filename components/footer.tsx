@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="container mx-auto px-28 xl:px-20 max-w-6xl mt-48 mb-5 max-sm:mt-40 flex justify-center items-center relative z-[102]">
+    <footer className="container mx-auto px-28 xl:px-20 max-w-6xl mt-48 mb-6  max-sm:mt-40 flex justify-center items-center relative z-[102]">
       <motion.div
         className="flex flex-col justify-center items-center w-fit relative"
         initial="default"

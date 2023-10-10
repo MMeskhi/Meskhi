@@ -90,6 +90,8 @@ export const skillsData = [
   "TypeScript",
   "React",
   "Next.js",
+  "Svelte",
+  "SvelteKit",
   "HTML/CSS",
   "Tailwind",
 ] as const;

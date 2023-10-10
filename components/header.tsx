@@ -41,7 +41,7 @@ export default function Header() {
       >
         <ul className="flex m-5 space-x-3 px-6 py-3 relative max-md:space-x-1 max-md:px-2 max-md:pt-2 max-md:m-0 max-md:mt-2">
           <motion.span
-            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg shadow-sm absolute inset-0 -z-20`}
+            className={`bg-slate-800 bg-opacity-80 rounded-full backdrop-blur-lg shadow-sm absolute border border-slate-900 inset-0 -z-20`}
             initial={{ y: -100, opacity: 0 }}
             animate={controls}
           ></motion.span>
@@ -67,7 +67,7 @@ export default function Header() {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-slate-600 bg-opacity-60 rounded-full absolute inset-0 -z-10"
+                    className="bg-slate-600 bg-opacity-60 rounded-full border border-slate-700 absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       stiffness: 400,

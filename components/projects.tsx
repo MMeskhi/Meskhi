@@ -35,7 +35,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Project"
-              className="relative before:duration-200 before:bg-slate-950 before:bg-opacity-20 hover:before:bg-opacity-10 before:absolute before:inset-0"
+              className="relative shadow-sm outline outline-slate-900 before:duration-200 before:bg-slate-950 before:bg-opacity-20 hover:before:bg-opacity-10 before:absolute before:inset-0"
             >
               <Image
                 className="w-full h-full rounded-sm"
@@ -60,7 +60,7 @@ export default function Projects() {
               <FaGithubSquare />
             </a>
             <div
-              className={`absolute max-sm:static max-sm:my-2 ${
+              className={`absolute border border-slate-900 shadow-sm max-sm:static max-sm:my-2 ${
                 index % 2 === 0 ? "right-0" : "left-0"
               } bottom-2 bg-slate-800 rounded-md py-2 px-4`}
             >
@@ -68,7 +68,7 @@ export default function Projects() {
               <p className="text-slate-300 max-w-xs">{item.description}</p>
             </div>
             <div
-              className={`absolute max-sm:static max-sm:w-fit ${
+              className={`absolute border border-slate-900 shadow-sm max-sm:static max-sm:w-fit ${
                 index % 2 === 0 ? "left-2" : "right-2"
               } bottom-2 bg-slate-800 bg-opacity-80 rounded-md py-2 px-4`}
             >

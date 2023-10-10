@@ -12,7 +12,7 @@ export default function About() {
     <section id="about" ref={ref} className="scroll-mt-40">
       <div className="py-16 px-12 flex items-start justify-between gap-20 relative overflow-hidden max-lg:py-12 max-lg:gap-8 max-md:flex-col max-sm:p-6">
         <motion.span
-          className="rounded-3xl bg-slate-800 bg-opacity-30 shadow-xl  absolute inset-0 -z-10"
+          className="rounded-3xl bg-slate-800 bg-opacity-30 shadow-xl border border-slate-900 absolute inset-0 -z-10"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
