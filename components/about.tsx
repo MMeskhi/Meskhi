@@ -20,7 +20,7 @@ export default function About() {
         ></motion.span>
         <div className="max-lg:text-sm">
           <Heading>About Me</Heading>
-          <p className="text-slate-400 max-w-xl w-full">
+          <p className="text-slate-400 max-w-xl w-full mt-1">
             I&apos;m a front-end developer with experience in website building
             and customization. I&apos;ve worked on multiple projects, such as
             the <span className="text-blue-300">Software Testers Academy </span>

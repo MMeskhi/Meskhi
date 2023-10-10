@@ -34,7 +34,7 @@ export default function Footer() {
           </p>
         </motion.span>
         <motion.div
-          className="text-slate-300 text-opacity-95 text-center cursor-default whitespace-nowrap"
+          className="text-slate-300 text-opacity-95 text-center cursor-default whitespace-nowrap select-none"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}

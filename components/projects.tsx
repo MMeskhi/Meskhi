@@ -17,7 +17,7 @@ export default function Projects() {
       className="scroll-mt-40 max-sm:scroll-mt-16"
     >
       <Heading>Projects</Heading>
-      <p className="text-slate-400 -mt-1">Some of the things I&apos;ve built</p>
+      <p className="text-slate-400 mt-1">Some of the things I&apos;ve built</p>
       <ul className="mt-4 space-y-8 [&>*:nth-child(odd)]:pr-20 [&>*:nth-child(even)]:pl-20 max-sm:[&>*:nth-child(odd)]:pr-0 max-sm:[&>*:nth-child(even)]:pl-0">
         {projectsData.map((item, index) => (
           <motion.li

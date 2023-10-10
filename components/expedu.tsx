@@ -14,34 +14,33 @@ export default function ExperienceEducation() {
       ref={ref}
       className="py-48 -scroll-mt-3 max-sm:-scroll-mt-16 max-sm:py-32"
     >
-      <div className="flex justify-between items-center">
-        <Heading>Experience</Heading>
-        <Heading>Education</Heading>
-      </div>
-      <hr className="mb-4 border-teal-700" />
-      <div className="flex justify-between items-start gap-16 max-sm:flex-col max-sm:items-stretch">
-        {experiencesData.map((item, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col"
-            initial={{ y: 80, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <h3 className="text-slate-300">{item.title}</h3>
-            <h4 className="text-slate-400">{item.place}</h4>
-            <p className="text-slate-400 max-w-sm text-left my-2">
-              {item.description}
-            </p>
-            <span className="text-slate-500 -mt-2">{item.date}</span>
-          </motion.div>
-        ))}
-        <div className="space-y-4">
+      <div className="flex justify-between items-start gap-8 max-md:flex-col max-md:items-stretch">
+        <div className="space-y-3 flex flex-col items-start">
+          <Heading>Experience</Heading>
+          {experiencesData.map((item, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col bg-slate-800 rounded-lg bg-opacity-40 shadow-md border border-slate-900 px-4 py-3"
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <h3 className="text-slate-300">{item.title}</h3>
+              <h4 className="text-slate-400">{item.place}</h4>
+              <p className="text-slate-400 max-w-sm text-left my-2">
+                {item.description}
+              </p>
+              <span className="text-slate-500 -mt-2">{item.date}</span>
+            </motion.div>
+          ))}
+        </div>
+        <div className="space-y-3 flex flex-col items-end">
+          <Heading>Education</Heading>
           {educationsData.map((item, index) => (
             <motion.div
               key={index}
-              className="text-right"
+              className="text-right bg-slate-800 rounded-lg bg-opacity-40 shadow-md border border-slate-900 px-3 py-2 w-fit"
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
