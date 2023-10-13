@@ -24,11 +24,11 @@ export default function Projects() {
             key={index}
             className="relative"
             initial={
-              index % 2 === 0 ? { x: -80, opacity: 0 } : { x: 80, opacity: 0 }
+              index % 2 === 0 ? { x: -60, opacity: 0 } : { x: 60, opacity: 0 }
             }
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
           >
             <a
               href={item.link}
@@ -53,26 +53,26 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className={`text-3xl text-slate-900 hover:text-opacity-70 duration-200 absolute top-1 ${
+              className={`text-3xl text-slate-950 hover:text-slate-700 duration-200 absolute top-1 ${
                 index % 2 === 0 ? "left-1" : "right-1"
               }`}
             >
               <FaGithubSquare />
             </a>
             <div
-              className={`absolute border border-slate-900 shadow-sm max-sm:static max-sm:my-2 ${
+              className={`absolute border border-slate-900 shadow-sm ${
                 index % 2 === 0 ? "right-0" : "left-0"
-              } bottom-2 bg-slate-800 rounded-md py-2 px-4`}
+              } bottom-2 bg-slate-800 rounded-md bg-opacity-90 backdrop-blur-sm py-2 px-4 max-sm:static max-sm:my-2`}
             >
               <h2 className="mb-2 text-slate-200">{item.title}</h2>
               <p className="text-slate-300 max-w-xs">{item.description}</p>
             </div>
             <div
-              className={`absolute border border-slate-900 shadow-sm max-sm:static max-sm:w-fit ${
+              className={`absolute border border-slate-900 shadow-sm ${
                 index % 2 === 0 ? "left-2" : "right-2"
-              } bottom-2 bg-slate-800 bg-opacity-80 rounded-md py-2 px-4`}
+              } bottom-2 bg-slate-800 bg-opacity-80 backdrop-blur-sm rounded-md py-1 px-2 max-sm:bg-opacity-60 max-sm:static max-sm:w-fit`}
             >
-              <span className="text-blue-100">{item.tags}</span>
+              <span className="text-blue-100 text-sm">{item.tags}</span>
             </div>
           </motion.li>
         ))}

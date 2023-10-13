@@ -21,7 +21,7 @@ export default function ExperienceEducation() {
             <motion.div
               key={index}
               className="flex flex-col bg-slate-800 rounded-lg bg-opacity-40 shadow-md border border-slate-900 px-4 py-3"
-              initial={{ y: 80, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
@@ -41,7 +41,7 @@ export default function ExperienceEducation() {
             <motion.div
               key={index}
               className="text-right bg-slate-800 rounded-lg bg-opacity-40 shadow-md border border-slate-900 px-3 py-2 w-fit"
-              initial={{ y: 80, opacity: 0 }}
+              initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index === 0 ? 0.2 : index * 0.4 }}

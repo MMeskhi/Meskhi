@@ -77,7 +77,7 @@ export const projectsData = [
   },
   {
     title: "Oftalmij",
-    description: "Website fot Javrishvili Eye Microsurgery Clinic Oftalmij",
+    description: "Website for Javrishvili eye clinic",
     tags: ["HTML/CSS, Javascript"],
     imageUrl: oftalmij,
     link: "https://mmeskhi.github.io/Oftalmij",
