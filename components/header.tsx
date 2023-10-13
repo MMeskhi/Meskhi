@@ -11,24 +11,36 @@ export default function Header() {
     useActiveSectionContext();
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
   const controls = useAnimation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80 && !isHeaderVisible) {
-        setIsHeaderVisible(true);
-        controls.start({ opacity: 1, y: 0 });
-      } else if (window.scrollY === 0 && isHeaderVisible) {
-        setIsHeaderVisible(false);
-        controls.start({ opacity: 0, y: -70 });
-      }
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        if (window.scrollY > 80 && !isHeaderVisible) {
+          setIsHeaderVisible(true);
+          controls.start({ opacity: 1, y: 0 });
+        } else if (window.scrollY === 0 && isHeaderVisible) {
+          setIsHeaderVisible(false);
+          controls.start({ opacity: 0, y: -70 });
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, [controls, isHeaderVisible]);
 
   return (
@@ -37,7 +49,7 @@ export default function Header() {
         className=""
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: window.innerWidth < 768 ? 0.4 : 1 }}
+        transition={{ delay: windowWidth < 768 ? 0.4 : 1 }}
       >
         <ul className="flex m-5 space-x-3 px-6 py-3 relative max-md:space-x-1 max-md:px-2 max-md:pt-2 max-md:m-0 max-md:mt-2">
           <motion.span
