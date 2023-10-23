@@ -53,7 +53,7 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className={`text-3xl text-slate-950 hover:text-slate-700 duration-200 absolute top-1 ${
+              className={`text-3xl text-slate-950 hover:opacity-70 duration-200 absolute top-1 ${
                 index % 2 === 0 ? "left-1" : "right-1"
               }`}
             >

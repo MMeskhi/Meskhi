@@ -86,12 +86,12 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "JavaScript (ES6+)",
+  "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
-  "Svelte",
   "Vue.js",
+  "Nuxt.js",
   "HTML/CSS",
   "Tailwind",
 ] as const;
