@@ -62,7 +62,7 @@ export const projectsData = [
   {
     title: "Software Testers Academy",
     description: "Platform for software testers academy",
-    tags: ["HTML/CSS, Javascript"],
+    tags: ["HTML/CSS", "Javascript"],
     imageUrl: sta,
     link: "https://softwaretestersacademy.ge",
     GithubLink: "https://github.com/MMeskhi/Software-Testers-Academy",
@@ -70,7 +70,7 @@ export const projectsData = [
   {
     title: "Georgian Wine Estates",
     description: "Georgian wine shop's online catalogue",
-    tags: ["HTML/CSS, Javascript"],
+    tags: ["HTML/CSS", "Javascript"],
     imageUrl: gwe,
     link: "https://gwe.ge",
     GithubLink: "https://github.com/MMeskhi/Georgian-Wine-Estates",
@@ -78,7 +78,7 @@ export const projectsData = [
   {
     title: "Oftalmij",
     description: "Website for Javrishvili eye clinic",
-    tags: ["HTML/CSS, Javascript"],
+    tags: ["HTML/CSS", "Javascript"],
     imageUrl: oftalmij,
     link: "https://mmeskhi.github.io/Oftalmij",
     GithubLink: "https://github.com/MMeskhi/Oftalmij",

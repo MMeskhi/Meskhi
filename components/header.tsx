@@ -5,6 +5,7 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { usePageVisibility } from "@/lib/page-visibility";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -43,12 +44,24 @@ export default function Header() {
     }
   }, [controls, isHeaderVisible]);
 
+  const isVisible = usePageVisibility();
+  const [hasAnimationPlayed, setHasAnimationPlayed] = useState(false);
+
+  useEffect(() => {
+    if (isVisible && !hasAnimationPlayed) {
+      setHasAnimationPlayed(true);
+    }
+  }, [isVisible, hasAnimationPlayed]);
+
   return (
     <header className="flex justify-center items-center fixed top-0 left-0 right-0 z-50">
       <motion.nav
         className=""
         initial={{ y: -60, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={{
+          y: hasAnimationPlayed ? 0 : -100,
+          opacity: hasAnimationPlayed ? 1 : 0,
+        }}
         transition={{ delay: windowWidth < 768 ? 0.4 : 1 }}
       >
         <ul className="flex m-5 space-x-3 px-6 py-3 relative max-md:space-x-1 max-md:px-2 max-md:pt-2 max-md:m-0 max-md:mt-2">

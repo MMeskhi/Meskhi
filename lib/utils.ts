@@ -6,12 +6,14 @@ export function constructMetadata({
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,
+  customTag = "darkreader-lock",
 }: {
   title?: string;
   description?: string;
   image?: string;
   icons?: string;
   noIndex?: boolean;
+  customTag?: string;
 } = {}): Metadata {
   return {
     title,
@@ -41,5 +43,10 @@ export function constructMetadata({
         follow: false,
       },
     }),
+    verification: {
+      other: {
+        "darkreader-lock": [customTag],
+      },
+    },
   };
 }

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { introData } from "@/lib/data";
 import { contactData } from "@/lib/data";
 import { motion } from "framer-motion";
@@ -11,9 +11,19 @@ import {
   AiFillInstagram,
   AiFillFacebook,
 } from "react-icons/ai";
+import { usePageVisibility } from "@/lib/page-visibility";
 
 export default function Intro() {
   const { ref } = useSectionInView("Intro", 0.5);
+
+  const isVisible = usePageVisibility();
+  const [hasAnimationPlayed, setHasAnimationPlayed] = useState(false);
+
+  useEffect(() => {
+    if (isVisible && !hasAnimationPlayed) {
+      setHasAnimationPlayed(true);
+    }
+  }, [isVisible, hasAnimationPlayed]);
 
   return (
     <section
@@ -27,7 +37,10 @@ export default function Intro() {
             className="flex items-start flex-col gap-y-2"
             key={index}
             initial={{ y: -160, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            animate={{
+              y: hasAnimationPlayed ? 0 : -160,
+              opacity: hasAnimationPlayed ? 1 : 0,
+            }}
           >
             <h1 className="text-6xl text-slate-200 max-sm:text-5xl uppercase">
               {item.title}
@@ -77,7 +90,10 @@ export default function Intro() {
         <motion.div
           className="flex flex-col items-end gap-y-6"
           initial={{ y: 160, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={{
+            y: hasAnimationPlayed ? 0 : 160,
+            opacity: hasAnimationPlayed ? 1 : 0,
+          }}
         >
           {contactData.map((item, index) => (
             <ul className="flex flex-col items-end gap-y-2" key={index}>

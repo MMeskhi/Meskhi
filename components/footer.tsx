@@ -40,7 +40,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          © 2023 Mikheil Meskhi
+          &copy; 2023 Mikheil Meskhi
         </motion.div>
       </motion.div>
     </footer>

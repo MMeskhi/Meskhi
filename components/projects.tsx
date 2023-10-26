@@ -62,17 +62,26 @@ export default function Projects() {
             <div
               className={`absolute border border-slate-900 shadow-sm ${
                 index % 2 === 0 ? "right-0" : "left-0"
-              } bottom-2 bg-slate-800 rounded-md bg-opacity-90 backdrop-blur-sm py-2 px-4 max-sm:static max-sm:my-2`}
+              } bottom-10 bg-slate-800 rounded-md bg-opacity-90 backdrop-blur-sm py-2 px-4 max-sm:static max-sm:mt-2`}
             >
-              <h2 className="mb-2 text-slate-200">{item.title}</h2>
-              <p className="text-slate-300 max-w-xs">{item.description}</p>
+              <h2 className="mb-1 text-slate-200 text-base">{item.title}</h2>
+              <p className="text-slate-300 max-w-xs max-lg:text-sm">
+                {item.description}
+              </p>
             </div>
             <div
-              className={`absolute border border-slate-900 shadow-sm ${
+              className={`absolute space-x-1 space-y-1 flex items-baseline flex-wrap max-sm:static ${
                 index % 2 === 0 ? "left-2" : "right-2"
-              } bottom-2 bg-slate-800 bg-opacity-80 backdrop-blur-sm rounded-md py-1 px-2 max-sm:bg-opacity-60 max-sm:static max-sm:w-fit`}
+              } bottom-2 `}
             >
-              <span className="text-blue-100 text-sm">{item.tags}</span>
+              {item.tags.map((tag, tagIndex) => (
+                <span
+                  key={tagIndex}
+                  className="text-blue-100 text-sm bg-slate-800 bg-opacity-95 backdrop-blur-sm rounded-[4px] py-1 px-2 max-sm:bg-opacity-60 max-sm:w-fit border border-slate-900 shadow-sm"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </motion.li>
         ))}
